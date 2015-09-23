@@ -1,0 +1,106 @@
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Chemical.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.csprojResolveAssemblyReference.cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\MainWindow.baml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\MainWindow.g.cs
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\App.g.cs
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.g.resources
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.Properties.Resources.resources
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.csproj.GenerateResource.Cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.xml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.xml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.lref
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\x86\Debug\App.baml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Core.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.dll
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\Core.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Chemical.exe
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Chemical.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Core.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Core.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.xml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.csprojResolveAssemblyReference.cache
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\MainWindow.baml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\App.g.cs
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.cache
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.lref
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\App.baml
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.g.resources
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.Properties.Resources.resources
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.csproj.GenerateResource.Cache
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.exe
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\obj\x86\Debug\Chemical.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\DAL.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.OrmLite.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.OrmLite.Sqlite.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Common.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\Mono.Data.Sqlite.dll
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\DAL.pdb
+C:\Users\Bogdan\Desktop\new\Chemical\Chemical\bin\x86\Debug\NServiceKit.Common.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Chemical.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Core.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\DAL.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.OrmLite.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.OrmLite.Sqlite.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.Common.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Mono.Data.Sqlite.dll
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Core.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\DAL.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\System.Windows.Interactivity.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.Interfaces.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\bin\x86\Debug\NServiceKit.Common.xml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.csprojResolveAssemblyReference.cache
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\MainWindow.baml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\MainWindow.g.cs
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\App.g.cs
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.cache
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical_MarkupCompile.lref
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\App.baml
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.g.resources
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.Properties.Resources.resources
+C:\Users\bogdanov\Desktop\new\New folder\Chemical\Chemical\obj\x86\Debug\Chemical.csproj.GenerateResource.Cache
+D:\src\22.09\Chemical\Chemical\obj\x86\Debug\Chemical.exe
+D:\src\22.09\Chemical\Chemical\obj\x86\Debug\Chemical.pdb

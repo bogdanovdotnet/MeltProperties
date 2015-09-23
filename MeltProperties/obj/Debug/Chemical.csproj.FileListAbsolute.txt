@@ -1,0 +1,12 @@
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\bin\Debug\Chemical.pdb
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.csprojResolveAssemblyReference.cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\MainWindow.baml
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\MainWindow.g.cs
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\App.g.cs
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical_MarkupCompile.cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.g.resources
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.Properties.Resources.resources
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.csproj.GenerateResource.Cache
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.exe
+C:\Users\bogdanov\Desktop\new\Chemical\Chemical\obj\Debug\Chemical.pdb
