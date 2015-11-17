@@ -11,6 +11,7 @@ using Core.Entities;
 
 using NServiceKit.DataAnnotations;
 using NServiceKit.OrmLite;
+using Core.Models;
 
 namespace DAL
 {
@@ -40,15 +41,17 @@ namespace DAL
             db.DropTable<Oxide>();
             db.DropTable<Phase>();
             db.DropTable<PhasesSystem>();
+            //db.DropTable<Project>();
 
             db.CreateTable<Oxide>();
             db.CreateTable<Phase>();
             db.CreateTable<PhasesSystem>();
+            //db.CreateTable<Project>();
             #region data
             var sio2 = new Oxide() { Formula = "SiO2" , IsDefault = true, IsRequred = true};
             var al2o3 = new Oxide() { Formula = "Al2O3", IsDefault = true, IsRequred = true };
             var cao = new Oxide() { Formula = "CaO", IsDefault = true, IsRequred = false };
-            var k2o = new Oxide() { Formula = "K20", IsDefault = true, IsRequred = false };
+            var k2o = new Oxide() { Formula = "K2O", IsDefault = true, IsRequred = false };
             var na2o = new Oxide() { Formula = "Na2O", IsDefault = true, IsRequred = false };
             var mgo = new Oxide() { Formula = "MgO", IsDefault = true, IsRequred = false };
             var tio2 = new Oxide() { Formula = "TiO2", IsDefault = false, IsRequred = false };
@@ -194,6 +197,18 @@ namespace DAL
             var phasesSystems = phases.Where(x => x.Oxides.Any(z => z.Formula.Equals(firstOxide.Formula)) 
                 || x.Oxides.Any(z => z.Formula.Equals(secondOxide.Formula)));
             return phasesSystems;
+        }
+
+        public static IEnumerable<Project> GetProjects()
+        {
+            IDbConnection db = dbFactory.OpenDbConnection();
+            return db.Select<Project>();
+        }
+
+        public static void SaveProject(ExcelModel model) 
+        {
+            IDbConnection db = dbFactory.OpenDbConnection();
+            db.Save(new Project() { Model = model });
         }
     }
 }

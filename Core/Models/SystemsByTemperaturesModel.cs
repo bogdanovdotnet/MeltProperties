@@ -16,5 +16,18 @@ namespace Core.Models
             this.SecondSystem = new PhaseSystemModel(secondSystem);
             this.Temperature = temperature;
         }
+
+        public SystemsByTemperaturesModel(SystemsByTemperaturesModel model)
+        {
+            this.FirstSystem = new PhaseSystemModel(model.FirstSystem);
+            this.SecondSystem = new PhaseSystemModel(model.SecondSystem);
+            this.Temperature = model.Temperature;
+        }
+
+        public void SetSolidSum()
+        {
+            this.FirstSystem.SetSolidSum();
+            this.SecondSystem.SetSolidSum();
+        }
     }
 }

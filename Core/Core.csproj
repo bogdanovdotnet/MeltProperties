@@ -82,8 +82,12 @@
     <Compile Include="Entities\Phase.cs" />
     <Compile Include="Entities\PhaseOxideContent.cs" />
     <Compile Include="Entities\PhasesSystem.cs" />
+    <Compile Include="Entities\Project.cs" />
     <Compile Include="Models\BaseCompositionModel.cs" />
     <Compile Include="Models\ChemicalComposition.cs" />
+    <Compile Include="Models\ExcelModel.cs" />
+    <Compile Include="Models\OxideResultModel.cs" />
+    <Compile Include="Models\OxidesByTemperatureModel.cs" />
     <Compile Include="Models\OxideСontent.cs" />
     <Compile Include="Models\PhaseComposition.cs" />
     <Compile Include="Models\PhaseModel.cs" />

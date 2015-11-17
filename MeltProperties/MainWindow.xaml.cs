@@ -6,6 +6,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Collections.ObjectModel;
+
+using ClosedXML.Excel;
+
 using Core.Entities;
 using Core.Models;
 using DAL;
@@ -14,9 +17,13 @@ namespace MeltProperties
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        public ObservableCollection<BaseCompositionModel> MyList = new ObservableCollection<BaseCompositionModel>();
+        public ObservableCollection<BaseCompositionModel> Oxides = new ObservableCollection<BaseCompositionModel>();
 
-        public ObservableCollection<string> Oxides = new ObservableCollection<string>();
+        //public ObservableCollection<string> Oxides = new ObservableCollection<string>();
+
+        //private List<BaseCompositionModel> resultList  = new List<BaseCompositionModel>();
+
+        private List<SystemsByTemperaturesModel> resTemperaturesModels = new List<SystemsByTemperaturesModel>();
 
         private Oxide firstOxide;
 
@@ -29,6 +36,8 @@ namespace MeltProperties
         private int endTemperature;
 
         private int range;
+
+        private List<OxidesByTemperatureModel>  oxidesResultModels = new List<OxidesByTemperatureModel>(); 
 
         // Declare the event
         public event PropertyChangedEventHandler PropertyChanged;
@@ -80,16 +89,25 @@ namespace MeltProperties
 
         private float secondModule;
 
+        private float sumR2O;
+
         public ObservableCollection<SystemsByTemperaturesModel> TemperaturesModels { get; set; }
 
         public MainWindow()
         {
-            Sqlite.Start();
+            //Sqlite.Start();
+            
+
             InitializeComponent();
             InitializeOxides();
-            ((CollectionViewSource)this.Resources["VS"]).Source = MyList;
+            ((CollectionViewSource)this.Resources["VS"]).Source = this.Oxides;
             DataContext = this;
-
+            var models = Sqlite.GetProjects();
+            if (models.Any())
+            {
+                ExcelCreator.CreateResult(models.Last<Project>().Model, false);
+            }
+            //ExcelCreator.Create();
         }
 
         private void InitializeOxides()
@@ -97,7 +115,7 @@ namespace MeltProperties
             var list = Sqlite.GetAllOxides().ToList();
             foreach (var oxide in list.Where(x => x.IsDefault).OrderByDescending(x => x.IsRequred))
             {
-                MyList.Add(new BaseCompositionModel()
+                this.Oxides.Add(new BaseCompositionModel()
                 {
                     Composition = oxide,
                     List = list
@@ -105,11 +123,19 @@ namespace MeltProperties
             }
         }
 
-    
         private void Go(object sender, RoutedEventArgs e)
         {
+            var dlg = new SelectOxidesModal();
+
+            // Configure the dialog box
+            //dlg.Owner = this;
+            //dlg.DocumentMargin = this.documentTextBox.Margin;
+
+            // Open the dialog box modally 
+            //dlg.ShowDialog();
+            //return;
             string res = string.Empty;
-            foreach (var model in MyList)
+            foreach (var model in this.Oxides)
             {
                 res += string.Format("{0}: {1} \n", model.Composition.Formula, model.Percentage);
             }
@@ -121,7 +147,7 @@ namespace MeltProperties
                 if (count > 3)
                     break;
                 res = string.Empty;
-                foreach (var model in MyList)
+                foreach (var model in this.Oxides)
                 {
                     res += string.Format("{0}: {1} \n", model.Composition.Formula, model.Percentage);
                 }
@@ -129,7 +155,7 @@ namespace MeltProperties
 
                 count++;
 
-            } while (!MyList.Sum(x => x.Percentage).Equals(100));
+            } while (!this.Oxides.Sum(x => x.Percentage).Equals(100));
 
             this.SetSystems();
             this.Main.Visibility = Visibility.Hidden;
@@ -297,10 +323,10 @@ namespace MeltProperties
 
         private void SetFullPercentage()
         {
-            var sum = MyList.Sum(x => x.Percentage);
+            var sum = this.Oxides.Sum(x => x.Percentage);
             if (sum.Equals(100))
                 return;
-            foreach (var composition in MyList)
+            foreach (var composition in this.Oxides)
             {
                 composition.Percentage = (composition.Percentage * 100) / sum;
             }
@@ -318,37 +344,40 @@ namespace MeltProperties
         private void GetSystemsOxides()
         {
             float firstMax, secondMax;
-            var maxPercent = MyList.Where(x => !x.Composition.IsRequred && x.Composition.IsDefault).Max(x => x.Percentage);
+            var maxPercent = this.Oxides.Where(x => !x.Composition.IsRequred && x.Composition.IsDefault).Max(x => x.Percentage);
             firstMax = maxPercent;
-            firstOxide = MyList.First(x => x.Percentage.Equals(maxPercent)).Composition;
-            maxPercent = MyList.Where(x => !x.Composition.IsRequred && x.Composition.IsDefault && !x.Composition.Equals(firstOxide)).Max(x => x.Percentage);
+            firstOxide = this.Oxides.First(x => x.Percentage.Equals(maxPercent)).Composition;
+            maxPercent = this.Oxides.Where(x => !x.Composition.IsRequred && x.Composition.IsDefault && !x.Composition.Equals(firstOxide)).Max(x => x.Percentage);
             secondMax = maxPercent;
-            secondOxide = MyList.First(x => !x.Composition.Equals(firstOxide) && x.Percentage.Equals(maxPercent)).Composition;
+            secondOxide = this.Oxides.First(x => !x.Composition.Equals(firstOxide) && x.Percentage.Equals(maxPercent)).Composition;
             this.SetModules(firstMax, secondMax);
         }
 
         private void SetModules(float firstMax, float secondMax)
         {
-            this.firstModule = firstMax/(firstMax + secondMax);
-            this.secondModule = secondMax / (firstMax + secondMax);
+            this.sumR2O = firstMax + secondMax;
+            this.firstModule = firstMax / this.sumR2O;
+            this.secondModule = secondMax / this.sumR2O;
         }
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            MyList.Add(new BaseCompositionModel(Sqlite.GetAllOxides()));
+            this.Oxides.Add(new BaseCompositionModel(Sqlite.GetAllOxides()));
         }
 
         private void PhaseGo(object sender, RoutedEventArgs e)
         {
+            this.SetResulTemperaturesModel();
             string res = this.TemperaturesModels.First().FirstSystem.Phases.First().Phase.Formula;
             res += "\n";
             res += this.TemperaturesModels.First().FirstSystem.Phases.First().Percentage.ToString();
-            MessageBox.Show(res);
+            //MessageBox.Show(res);
+            this.SetOxidesResult();
         }
 
         private void Remove(object sender, RoutedEventArgs e)
         {
-            MyList.RemoveAt(MyList.Count - 1);
+            this.Oxides.RemoveAt(this.Oxides.Count - 1);
         }
 
         private void SetComposition(object sender, RoutedEventArgs e)
@@ -366,5 +395,96 @@ namespace MeltProperties
             currentTextBox.Visibility = Visibility.Collapsed;
             ((StackPanel)currentTextBox.Parent).Children[0].Visibility = Visibility.Visible;
         }
+
+        private void SetResulTemperaturesModel()
+        {
+            foreach (var temperaturesModel in this.TemperaturesModels)
+            {
+                temperaturesModel.FirstSystem.SumLiquid = temperaturesModel.FirstSystem.Phases.Sum(x => x.Percentage);
+                temperaturesModel.SecondSystem.SumLiquid = temperaturesModel.SecondSystem.Phases.Sum(x => x.Percentage);
+            }
+
+            this.TemperaturesModels.ForEach(x => this.resTemperaturesModels.Add(new SystemsByTemperaturesModel(x)));
+            //this.resTemperaturesModels.AddRange(this.TemperaturesModels.ToList());
+            foreach (var model in this.resTemperaturesModels)
+            {
+                foreach (var phase in model.FirstSystem.Phases)
+                {
+                    phase.Percentage = phase.Percentage * this.firstModule;
+                }
+
+                foreach (var phase in model.SecondSystem.Phases)
+                {
+                    phase.Percentage = phase.Percentage * this.secondModule;
+                }
+
+                model.FirstSystem.SumLiquid = model.FirstSystem.Phases.Sum(x => x.Percentage);
+                model.SecondSystem.SumLiquid = model.SecondSystem.Phases.Sum(x => x.Percentage);
+            }
+        }
+
+        private void SetOxidesResult()
+        {
+            var oxides = new List<Oxide>(this.Oxides.Where(x => x.Composition.IsRequred).Select(x => x.Composition));
+            oxides.Add(this.firstOxide);
+            oxides.Add(this.secondOxide);
+
+            foreach (var model in this.resTemperaturesModels)
+            {
+                var oxideResult = new OxidesByTemperatureModel();
+                oxideResult.Temperature = model.Temperature;
+                foreach (var oxide in oxides)
+                {
+                    float sum = 0;
+                    foreach (var phase in model.FirstSystem.Phases)
+                    {
+                        var curOxide = phase.Phase.Oxides.FirstOrDefault(x => x.Oxide.Formula == oxide.Formula);
+                        if (curOxide != null)
+                        {
+                            sum += (phase.Percentage*curOxide.Percentage)/100;
+                        }
+                    }
+                    foreach (var phase in model.SecondSystem.Phases)
+                    {
+                        var curOxide = phase.Phase.Oxides.FirstOrDefault(x => x.Oxide.Formula == oxide.Formula);
+                        if (curOxide != null)
+                        {
+                            sum += (phase.Percentage * curOxide.Percentage) / 100;
+                        }
+                    }
+                    oxideResult.OxidesResult.Add(new OxideResultModel()
+                    {
+                        Oxide = oxide,
+                        Percentage = sum
+                    });
+                }
+                model.SetSolidSum();
+                this.oxidesResultModels.Add(oxideResult);
+            }
+
+            this.SaveExcelResult();
+        }
+
+        private void SaveExcelResult()
+        {
+            var excelModel = new ExcelModel(
+                "New material",
+                this.FirstSystem.Formula,
+                this.SecondSystem.Formula,
+                this.firstOxide.Formula,
+                this.secondOxide.Formula,
+                this.TemperaturesModels.Select(x => x.Temperature).ToList(),
+                this.Oxides.ToList(),
+                this.TemperaturesModels.ToList(),
+                this.resTemperaturesModels,
+                this.firstModule,
+                this.secondModule,
+                this.oxidesResultModels,
+                this.FirstSystem,
+                this.SecondSystem,
+                this.sumR2O);
+            ExcelCreator.CreateResult(excelModel);
+        }
+
     }
 }
